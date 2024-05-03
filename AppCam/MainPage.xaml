@@ -16,6 +16,16 @@
 
             <Button Text="Photo" Clicked="Button_Clicked"/>
             <Image x:Name="Photo" WidthRequest="300" HeightRequest="300"/>
+            <CollectionView x:Name="SnapshotsView" ItemsSource="{Binding _snapshots}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Image Source="{Binding .}" WidthRequest="300" HeightRequest="300"/>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
+
 
 
         </VerticalStackLayout>
